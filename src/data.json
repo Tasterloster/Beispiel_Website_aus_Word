@@ -25,6 +25,23 @@
           "slug": "c",
           "image": "c.jpg",
           "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        }
+
+      ]
+    },
+    {
+      "name": "medium",
+      "slug": "affordable",
+      "id": 1,
+      "description": "Our most affordable plan",
+      "price_monthly": "165$",
+      "price_yearly": "500$",
+      "features": [
+        {
+          "name": "A",
+          "slug": "a",
+          "image": "a.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
         },
         {
           "name": "D",
@@ -35,13 +52,14 @@
         }
 
       ]
-    },{
-      "name": "cheap",
+    },
+    {
+      "name": "expensive",
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",
-      "price_monthly": "99$",
-      "price_yearly": "350$",
+      "price_monthly": "250$",
+      "price_yearly": "1200$",
       "features": [
         {
           "name": "A",

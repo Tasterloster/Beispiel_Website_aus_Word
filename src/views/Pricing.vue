@@ -1,13 +1,16 @@
 <script lang="ts">
 import sourceData from '@/data.json'
 import PricingCard from '@/components/PricingCard.vue'
+import SelectPaymentOption from '@/components/selectPaymentOption.vue'
 export default {
   components: {
+    SelectPaymentOption,
     PricingCard,
   },
   data() {
     return {
       paymentPlans: sourceData.paymentPlans,
+      paymentInterval: '',
     }
   },
   setup() {
@@ -15,24 +18,32 @@ export default {
       paymentPlans: sourceData.paymentPlans,
     }
   },
+  methods: {
+    setPaymentInterval() {
+      this.paymentInterval === 'yearly'
+        ? (this.paymentInterval = 'monthly')
+        : (this.paymentInterval = 'yearly')
+    },
+  },
 }
 </script>
 
 <template>
   <div>
     <section v-if="paymentPlans" class="paymentPlansBody">
-      <h1>Pricing plans</h1>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
-      <button>Monthly/Yearly</button>
+      <div class="paymentsHeader">
+        <h1>Pricing plans</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+        <selectPaymentOption></selectPaymentOption>
+      </div>
       <section class="paymentOptions">
-        <div class="paymentPlanCard">
-          <PricingCard
-            v-for="paymentPlan in paymentPlans"
-            :key="paymentPlan.id"
-            :paymentPlan="paymentPlan"
-          >
-          </PricingCard>
-        </div>
+        <PricingCard
+          v-for="paymentPlan in paymentPlans"
+          :key="paymentPlan.id"
+          :paymentPlan="paymentPlan"
+          :payment-interval="paymentInterval"
+        >
+        </PricingCard>
       </section>
     </section>
   </div>
@@ -47,7 +58,18 @@ export default {
   line-height: 2;
 }
 
-.paymentOptions {
-
+.paymentsHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
 }
+
+.paymentOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 </style>
