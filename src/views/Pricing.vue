@@ -1,5 +1,5 @@
 <script lang="ts">
-import sourceData from '@/data.json'
+import sourceData from '@/pricing-data.json'
 import PricingCard from '@/components/PricingCard.vue'
 import SelectPaymentOption from '@/components/selectPaymentOption.vue'
 export default {
