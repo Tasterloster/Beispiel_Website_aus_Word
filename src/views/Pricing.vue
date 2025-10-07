@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       paymentPlans: sourceData.paymentPlans,
-      paymentInterval: '',
+      paymentInterval: 'monthly',
     }
   },
   setup() {
@@ -29,12 +29,12 @@ export default {
 </script>
 
 <template>
-  <div>
     <section v-if="paymentPlans" class="paymentPlansBody">
       <div class="paymentsHeader">
         <h1>Pricing plans</h1>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
-        <selectPaymentOption></selectPaymentOption>
+        <p>Choose Payment option</p>
+        <selectPaymentOption v-on:updatePaymentOption="setPaymentInterval" ></selectPaymentOption>
       </div>
       <section class="paymentOptions">
         <PricingCard
@@ -46,7 +46,6 @@ export default {
         </PricingCard>
       </section>
     </section>
-  </div>
 </template>
 
 <style scoped>
@@ -71,5 +70,10 @@ export default {
   flex-direction: row;
   justify-content: space-around;
 }
-
+@media screen and (max-width: 531px) {
+  .paymentOptions {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
 </style>

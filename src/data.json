@@ -5,8 +5,8 @@
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",
-      "price_monthly": "99$",
-      "price_yearly": "350$",
+      "price_monthly": "99",
+      "price_yearly": "350",
       "features": [
         {
           "name": "A",
@@ -34,8 +34,8 @@
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",
-      "price_monthly": "165$",
-      "price_yearly": "500$",
+      "price_monthly": "165",
+      "price_yearly": "500",
       "features": [
         {
           "name": "A",
@@ -58,8 +58,8 @@
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",
-      "price_monthly": "250$",
-      "price_yearly": "1200$",
+      "price_monthly": "250",
+      "price_yearly": "1200",
       "features": [
         {
           "name": "A",

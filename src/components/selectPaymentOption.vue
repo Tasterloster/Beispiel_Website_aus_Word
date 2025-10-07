@@ -1,69 +1,82 @@
-<script setup lang="ts">
-
+<script  lang="ts">
+export default {
+  emits: ['updatePaymentOption'],
+}
 </script>
 
 <template>
-  <label class="switch">
-    <input type="checkbox" />
-    <span class="slider"></span>
-    <span class="switchText" id="yearly">Yearly</span>
-    <span class="switchText" id="monthly">Monthy</span>
+  <label class="segmented-toggle">
+    <input type="checkbox" @click="$emit('updatePaymentOption')" aria-label="Billing cycle (unchecked = Monthly, checked = Yearly)" />
+    <span class="track">
+      <span class="option">Monthly</span>
+      <span class="option">Yearly</span>
+      <span class="thumb" aria-hidden="true"></span>
+    </span>
   </label>
 </template>
 
 <style scoped>
-
-.switch {
+.segmented-toggle {
   position: relative;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
 }
 
-.switchText {
-  width: 50%;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
+/* Das eigentliche Klickziel ist die ganze Fläche */
+.segmented-toggle > input {
   position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
   cursor: pointer;
+  z-index: 3; /* über dem Track */
+}
+
+/* Track mit zwei Spalten */
+.track {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #bdbdbd;
+  overflow: hidden;
+  user-select: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Optionen (Text) */
+.option {
+  padding: 10px 16px;
+  text-align: center;
+  z-index: 2; /* über der Thumb-Fläche */
+  color: #666;
+}
+
+/* Der dunkle „Slider“, der unter die aktive Option fährt */
+.thumb {
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  width: 50%;   /* genau eine Spalte breit */
+  height: 100%;
+  background: #2c3e50;
+  transition: transform .25s ease;
+  z-index: 1;
 }
 
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+/* Zustand: unchecked = Monthly aktiv */
+.segmented-toggle > input:not(:checked) + .track .option:first-child { color: #fff; }
+
+/* Zustand: checked = Yearly aktiv */
+.segmented-toggle > input:checked + .track .thumb { transform: translateX(100%); }
+/* aktiv = Yearly */
+.segmented-toggle > input:checked + .track > .option:nth-child(2) {
+  color: #fff;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
+/* Optional: kleine Hover/Focus Details */
+.segmented-toggle > input:focus-visible + .track {
+  outline: 2px solid #6aa9ff;
+  outline-offset: 2px;
 }
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
+.track .option:hover { background: #f6f6f6; }
 </style>
