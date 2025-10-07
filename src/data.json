@@ -1,0 +1,75 @@
+{
+  "paymentPlans": [
+    {
+      "name": "cheap",
+      "slug": "affordable",
+      "id": 1,
+      "description": "Our most affordable plan",
+      "price_monthly": "99$",
+      "price_yearly": "350$",
+      "features": [
+        {
+          "name": "A",
+          "slug": "a",
+          "image": "a.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        },
+        {
+          "name": "B",
+          "slug": "b",
+          "image": "b.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        },
+        {
+          "name": "C",
+          "slug": "c",
+          "image": "c.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        },
+        {
+          "name": "D",
+          "slug": "d",
+          "image": "d.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+        }
+
+      ]
+    },{
+      "name": "cheap",
+      "slug": "affordable",
+      "id": 1,
+      "description": "Our most affordable plan",
+      "price_monthly": "99$",
+      "price_yearly": "350$",
+      "features": [
+        {
+          "name": "A",
+          "slug": "a",
+          "image": "a.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        },
+        {
+          "name": "B",
+          "slug": "b",
+          "image": "b.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        },
+        {
+          "name": "C",
+          "slug": "c",
+          "image": "c.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        },
+        {
+          "name": "D",
+          "slug": "d",
+          "image": "d.jpg",
+          "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+        }
+
+      ]
+    }
+  ]
+}

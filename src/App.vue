@@ -3,12 +3,25 @@ import TheNavigation from '@/components/TheNavigation.vue'
 </script>
 
 <template>
-<TheNavigation></TheNavigation>
-  <div class="container">
-    <router-view>
+  <div class="bodyContainer">
+    <div class="header">
+      <TheNavigation> </TheNavigation>
+    </div>
 
-    </router-view>
+    <div class="container">
+      <router-view> </router-view>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+}
+</style>
