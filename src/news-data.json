@@ -1,0 +1,48 @@
+{
+  "news": [
+    {
+      "name": "Wirtschaft auf Talflug",
+      "slug": "Economy doomed",
+      "id": 0,
+      "headline": "Alles doof! :(",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "image": "economydoomed.jpg"
+    },
+    {
+      "name": "Wirtschaft wieder gut",
+      "slug": "Economy not doomed anymore",
+      "id": 1,
+      "headline": "Alles gut! :)",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "image": "economynotdoomed.jpg"
+
+    },
+    {
+      "name": "Wirtschaft stagniert",
+      "slug": "Economy doomed soon?",
+      "id": 2,
+      "headline": "Will we all die?",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "image": "economydoomedquestionmark.jpg"
+
+    },
+    {
+      "name": "Wirtschaft erholt sich",
+      "slug": "Economy saved",
+      "id": 3,
+      "headline": "Alles gerettet! :)",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "image": "economysaved.jpg"
+
+    },
+    {
+      "name": "Bossbaby",
+      "slug": "Bossbaby",
+      "id": 4,
+      "headline": "The most anticipated movie of the Century",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+      "image": "bossbaby.jpg"
+
+    }
+  ]
+}

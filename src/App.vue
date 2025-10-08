@@ -20,8 +20,7 @@ import TheNavigation from '@/components/TheNavigation.vue'
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2em;
 }
 
-.header {
-}
 </style>

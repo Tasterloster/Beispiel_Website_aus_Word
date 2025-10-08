@@ -27,8 +27,8 @@ export default {
         </h2>
         <p>/mo</p>
       </div>
-      <ul class="featureText" v-for="feature in paymentPlan.features" :key="feature.id">
-        <li>{{ feature.name }} - {{ feature.description }}</li>
+      <ul class="featureText" >
+        <li v-for="feature in paymentPlan.features" :key="feature.id">{{ feature.name }} - {{ feature.description }}</li>
       </ul>
     </span>
   </div>
@@ -55,12 +55,18 @@ export default {
   align-items: baseline;
 }
 
-@media screen and (max-width: 531px) {
+@media (max-width: 831px) {
   .card {
-    border: #2c3e50 1px solid;
-    max-width: 100%;
-    width: 100%;
-    position: relative;
+    width: 50%;
+    max-width: 45%;
   }
 }
+
+@media (max-width: 531px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 </style>

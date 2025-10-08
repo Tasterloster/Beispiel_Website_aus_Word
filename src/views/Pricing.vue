@@ -13,11 +13,6 @@ export default {
       paymentInterval: 'monthly',
     }
   },
-  setup() {
-    return {
-      paymentPlans: sourceData.paymentPlans,
-    }
-  },
   methods: {
     setPaymentInterval() {
       this.paymentInterval === 'yearly'
@@ -54,7 +49,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  line-height: 2;
 }
 
 .paymentsHeader {
@@ -69,11 +63,15 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2em;
 }
-@media screen and (max-width: 531px) {
+
+
+@media (max-width: 531px) {
   .paymentOptions {
     flex-direction: column;
-    gap: 2em;
   }
 }
+
 </style>
