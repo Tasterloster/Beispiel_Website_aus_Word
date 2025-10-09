@@ -1,7 +1,7 @@
 {
   "paymentPlans": [
     {
-      "name": "cheap",
+      "name": "Wucher",
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "name": "medium",
+      "name": "Abzocke",
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "name": "expensive",
+      "name": "SAMMA?!",
       "slug": "affordable",
       "id": 1,
       "description": "Our most affordable plan",

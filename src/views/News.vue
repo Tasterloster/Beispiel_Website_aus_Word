@@ -22,7 +22,7 @@ function openModal(n: NewsInterface) {
 <template>
   <div class="headlineBody">
     <div class="featureHeadlines">
-      <h1>Featured</h1>
+      <h1 class="welcome">Featured</h1>
       <headline-card
         v-if="featured"
         :news="featured"
@@ -44,6 +44,9 @@ function openModal(n: NewsInterface) {
 </template>
 
 <style scoped>
+.welcome {
+  text-indent: 25px;
+}
 .headlineBody { display: flex; flex-direction: row; gap: 1rem; }
 .headlineBody>.featureHeadlines { max-width: 55%; display: flex; flex-direction: column; align-content: center; }
 .headlineBody>.regularHeadlines { display: flex; max-width: 45%; flex-direction: column; gap: 1em; box-sizing: border-box; }

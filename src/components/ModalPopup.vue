@@ -32,7 +32,7 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
       <div class="dialog">
         <button class="closeBtn" @click="close" aria-label="Close">✕</button>
         <div class="dialog__content" v-if="news">
-          <img :src="`/images/${news.image}`" :alt="news.headline" />
+          <img :src="`/images/news_images/${news.image}`" :alt="news.headline" />
           <h2>{{ news.name }} – {{ news.headline }}</h2>
           <div class="dialog__text">
             <p>{{ news.text }}</p>

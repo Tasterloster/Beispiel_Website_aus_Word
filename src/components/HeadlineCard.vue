@@ -19,7 +19,7 @@ const emit = defineEmits<{
     @keyup.enter.space="emit('open', props.news)"
   >
     <div class="headlineCard__picture">
-      <img :src="`/images/${props.news.image}`" alt="Headline" />
+      <img :src="`/images/news_images/${props.news.image}`" alt="Headline" />
       <h2>{{ props.news.name }} - {{ props.news.headline }}</h2>
     </div>
     <div class="headlineCard__text">

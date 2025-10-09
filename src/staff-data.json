@@ -1,0 +1,57 @@
+{
+  "staffs": [
+    {
+      "name": "Anna",
+      "slug": "Anna",
+      "id": 0,
+      "motto": "Alles doof! :(",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et "
+    },
+    {
+      "name": "Denise",
+      "slug": "Denise",
+      "id": 1,
+      "motto": "Alles gut! :)",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+    },
+    {
+      "name": "Hannes",
+      "slug": "Economy doomed soon?",
+      "id": 2,
+      "motto": "Will we all die?",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+    },
+    {
+      "name": "Ricarda",
+      "slug": "Ricarda",
+      "id": 3,
+      "motto": "Alles gerettet! :)",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+    },
+    {
+      "name": "Richard",
+      "slug": "Richard",
+      "id": 4,
+      "motto": "The most anticipated man of the Century",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+
+    },
+    {
+      "name": "Robert",
+      "slug": "Robert",
+      "id": 4,
+      "motto": "The second most anticipated man of the Century",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    },
+    {
+      "name": "Franz",
+      "slug": "Franz",
+      "id": 5,
+      "motto": "The third most anticipated man of the Century",
+      "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    }
+  ]
+}
