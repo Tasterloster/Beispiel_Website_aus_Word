@@ -1,7 +1,7 @@
 <script lang="ts">
 import sourceData from '@/pricing-data.json'
-import PricingCard from '@/components/PricingCard.vue'
-import SelectPaymentOption from '@/components/selectPaymentOption.vue'
+import PricingCard from '@/components/Pricing/PricingCard.vue'
+import SelectPaymentOption from '@/components/Pricing/selectPaymentOption.vue'
 export default {
   components: {
     SelectPaymentOption,
@@ -14,10 +14,8 @@ export default {
     }
   },
   methods: {
-    setPaymentInterval() {
-      this.paymentInterval === 'yearly'
-        ? (this.paymentInterval = 'monthly')
-        : (this.paymentInterval = 'yearly')
+    setPaymentInterval(paymentInterval: string) {  //TODO: Rückgrabewert übernehmen, sprich monthly oder yearly emit aus dem child
+      this.paymentInterval = paymentInterval
     },
   },
 }
@@ -29,7 +27,7 @@ export default {
         <h1>Pricing plans</h1>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
         <p>Choose Payment option</p>
-        <selectPaymentOption v-on:updatePaymentOption="setPaymentInterval" ></selectPaymentOption>
+        <selectPaymentOption @updatePaymentOption="setPaymentInterval" ></selectPaymentOption>
       </div>
       <section class="paymentOptions">
         <PricingCard

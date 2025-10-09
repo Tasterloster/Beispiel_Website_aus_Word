@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NewsInterface } from '@/components/NewsInterface.ts'
+import type { NewsInterface } from '@/components/News/NewsInterface.ts'
 import type { PropType } from 'vue'
 
 const props = defineProps({
@@ -18,11 +18,11 @@ const emit = defineEmits<{
     @click="emit('open', props.news)"
     @keyup.enter.space="emit('open', props.news)"
   >
-    <div class="headlineCard__picture">
+    <div class="picture">
       <img :src="`/images/news_images/${props.news.image}`" alt="Headline" />
       <h2>{{ props.news.name }} - {{ props.news.headline }}</h2>
     </div>
-    <div class="headlineCard__text">
+    <div class="text">
       <p>{{ props.news.text }}</p>
     </div>
   </div>
@@ -36,34 +36,39 @@ const emit = defineEmits<{
   gap: 1em;
   align-items: flex-start;
   cursor: pointer;
-}
-.headlineCard__text {
-  display: flex;
-  flex-direction: column;
-}
-.headlineCard__picture {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-}
-.headlineCard__picture > img {
-  max-width: 30%;
-  height: auto;
-  border: 1px solid #2c3e50;
-  margin: auto;
-  border-radius: 15px;
-}
-.headlineCard:hover {
-  box-shadow: 0 0 3px 1px rgba(0, 140, 186, 0.5);
-}
-.headlineCard:focus-visible {
-  outline: 2px solid #66a3ff;
-  outline-offset: 2px;
-}
 
-@media (max-width: 900px) {
-  .headlineCard {
+  @media (max-width: 900px) {
     padding: 3em;
   }
+
+  &:hover {
+    box-shadow: 0 0 3px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #66a3ff;
+    outline-offset: 2px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .picture {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .picture > img {
+    max-width: 30%;
+    height: auto;
+    border: 1px solid #2c3e50;
+    margin: auto;
+    border-radius: 15px;
+  }
 }
+
+
 </style>

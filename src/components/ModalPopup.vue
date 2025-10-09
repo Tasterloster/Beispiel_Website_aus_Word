@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount } from 'vue'
 import type { PropType } from 'vue'
-import type { NewsInterface } from '@/components/NewsInterface.ts'
+import type { NewsInterface } from '@/components/News/NewsInterface.ts'
 
 const props = defineProps({
   modelValue: { type: Boolean, required: true },
@@ -31,11 +31,11 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
     >
       <div class="dialog">
         <button class="closeBtn" @click="close" aria-label="Close">✕</button>
-        <div class="dialog__content" v-if="news">
-          <img :src="`/images/news_images/${news.image}`" :alt="news.headline" />
-          <h2>{{ news.name }} – {{ news.headline }}</h2>
+        <div class="dialog__content">
+          <slot name="content_image"></slot>
+          <slot name="content_header"></slot>
           <div class="dialog__text">
-            <p>{{ news.text }}</p>
+            <slot name="content_text"></slot>
           </div>
         </div>
       </div>

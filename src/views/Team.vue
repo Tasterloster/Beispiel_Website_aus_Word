@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import sourceData from '@/staff-data.json'
-import StaffCard from '@/components/StaffCard.vue'
+import StaffCard from '@/components/Team/StaffCard.vue'
 const staff = sourceData.staffs
 
 </script>
@@ -18,7 +18,6 @@ const staff = sourceData.staffs
     </staff-card>
   </div>
 </div>
-
 </template>
 
 <style scoped>
