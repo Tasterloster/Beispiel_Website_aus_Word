@@ -32,10 +32,21 @@ const emit = defineEmits<{
 .headlineCard {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 1em;
   gap: 1em;
   align-items: flex-start;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(44, 62, 80, 1);
+    border: 1px solid #F7FBFF;
+
+  }
+
+  &:not(:last-child){
+    border-bottom: #2c3e50 1px dotted;
+  }
 
   @media (max-width: 900px) {
     padding: 3em;
@@ -43,6 +54,7 @@ const emit = defineEmits<{
 
   &:hover {
     box-shadow: 0 0 3px 1px rgba(0, 140, 186, 0.5);
+    background-color: rgba(44, 62, 80,0.05);
   }
 
   &:focus-visible {
@@ -58,6 +70,8 @@ const emit = defineEmits<{
   .picture {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
   }
 
@@ -66,7 +80,6 @@ const emit = defineEmits<{
     height: auto;
     border: 1px solid #2c3e50;
     margin: auto;
-    border-radius: 15px;
   }
 }
 

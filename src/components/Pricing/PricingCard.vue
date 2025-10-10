@@ -38,6 +38,16 @@ export default {
 .card {
   border: #2c3e50 1px solid;
   max-width: 30%;
+  background-color: rgba(44, 62, 80,0.1);
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(44, 62, 80, 1);
+  color: #F7FBFF;
+  border: 1px solid #F7FBFF;
+
 }
 
 .card__text {

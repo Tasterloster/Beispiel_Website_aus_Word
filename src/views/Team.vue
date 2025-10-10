@@ -7,7 +7,6 @@ const staff = sourceData.staffs
 </script>
 
 <template>
-<div class="teamPageContainer">
   <h1>Our Team!</h1>
   <div class="teamContainer">
     <staff-card
@@ -17,15 +16,10 @@ const staff = sourceData.staffs
     >
     </staff-card>
   </div>
-</div>
 </template>
 
 <style scoped>
-.teamPageContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .teamContainer {
   display: flex;
   flex-direction: row;

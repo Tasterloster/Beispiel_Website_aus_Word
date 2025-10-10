@@ -33,7 +33,9 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
         <button class="closeBtn" @click="close" aria-label="Close">✕</button>
         <div class="dialog__content">
           <slot name="content_image"></slot>
-          <slot name="content_header"></slot>
+          <div class="dialog__header">
+            <slot name="content_header"></slot>
+          </div>
           <div class="dialog__text">
             <slot name="content_text"></slot>
           </div>
@@ -58,7 +60,6 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
   width: min(90vw, 900px);
   max-height: 90vh;
   background: #fff;
-  border-radius: 14px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
   padding: 1.25rem;
   position: relative; /* für Close-Button */
@@ -71,11 +72,11 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
+  justify-content: center;
 }
 .dialog__content > img {
   width: min(50%, 320px);
   height: auto;
-  border-radius: 10px;
   border: 1px solid #2c3e50;
 }
 
@@ -84,8 +85,14 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
   top: 10px;
   right: 14px;
   border: 0;
-  background: transparent;
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+.dialog__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 </style>

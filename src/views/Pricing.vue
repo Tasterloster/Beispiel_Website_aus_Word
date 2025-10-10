@@ -14,7 +14,7 @@ export default {
     }
   },
   methods: {
-    setPaymentInterval(paymentInterval: string) {  //TODO: Rückgrabewert übernehmen, sprich monthly oder yearly emit aus dem child
+    setPaymentInterval(paymentInterval: string) {
       this.paymentInterval = paymentInterval
     },
   },
@@ -42,12 +42,6 @@ export default {
 </template>
 
 <style scoped>
-.paymentPlansBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .paymentsHeader {
   display: flex;
@@ -63,6 +57,7 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 2em;
+
 }
 
 

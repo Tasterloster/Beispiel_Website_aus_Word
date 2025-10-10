@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TheNavigation from '@/components/TheNavigation.vue'
+import TheFooter from '@/components/TheFooter.vue'
 </script>
 
 <template>
@@ -10,6 +11,9 @@ import TheNavigation from '@/components/TheNavigation.vue'
 
     <div class="container">
       <router-view> </router-view>
+    </div>
+    <div class="footer">
+      <theFooter></theFooter>
     </div>
   </div>
 </template>
@@ -23,4 +27,13 @@ import TheNavigation from '@/components/TheNavigation.vue'
   gap: 2em;
 }
 
+.header, .footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(44, 62, 80, 0.1);
+  width: 100%;
+  height: 4.5em;
+}
 </style>
