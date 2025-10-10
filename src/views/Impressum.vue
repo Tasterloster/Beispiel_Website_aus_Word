@@ -4,7 +4,7 @@
 <template>
   <h1>Impressum</h1>
   <address class="contact">
-    <a href="mailto:example@example.com">  <p>Lucas Geldmacher</p>
+    <a class="navLink" href="mailto:example@example.com">  <p>Lucas Geldmacher</p>
     </a>
     <br>
     Martinstraße 74

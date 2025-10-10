@@ -75,7 +75,7 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
   justify-content: center;
 }
 .dialog__content > img {
-  width: min(50%, 320px);
+  width: min(50%, 300px);
   height: auto;
   border: 1px solid #2c3e50;
 }
@@ -87,6 +87,9 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
   border: 0;
   font-size: 1.25rem;
   cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  padding: .5em;
 }
 
 .dialog__header {

@@ -20,11 +20,5 @@ const staff = sourceData.staffs
 
 <style scoped>
 
-.teamContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+
 </style>

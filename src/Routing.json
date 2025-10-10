@@ -1,0 +1,44 @@
+{
+  "header":{
+    "routes": [
+      {
+        "path": "home",
+        "id": 0,
+        "text": "Home"
+      },
+      {
+        "path": "news",
+        "id": 1,
+        "text": "News"
+      },
+      {
+        "path": "pricing",
+        "id": 2,
+        "text": "Pricing"
+      },
+      {
+        "path": "team",
+        "id": 3,
+        "text": "Team"
+      },
+      {
+        "path": "contact",
+        "id": 4,
+        "text": "Contact"
+      }
+    ]
+  },
+  "footer": {
+    "routes": [
+      {
+        "path": "contact",
+        "id": 0,
+        "text": "Contact"
+      },{
+        "path": "impressum",
+        "id": 1,
+        "text": "impressum"
+      }
+    ]
+  }
+}

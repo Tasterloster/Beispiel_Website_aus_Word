@@ -1,9 +1,19 @@
 <script setup lang="ts">
+import sourceDataRaw from '@/Routing.json'
+import { ref } from 'vue'
+
+const footerRoutes = ref(sourceDataRaw.footer.routes)
 </script>
 
 <template>
-  <router-link class="navLink" to="/contact">Contact us</router-link>
-  <router-link class="navLink" to="/impressum">Impressum</router-link>
+  <div>
+
+  </div>
+  <router-link
+    class="navLink"
+    v-for="route in footerRoutes"
+    :key="route.id"
+    :to="route.path">{{route.text}}</router-link>
 </template>
 
 <style scoped></style>

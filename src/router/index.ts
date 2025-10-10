@@ -13,7 +13,7 @@ const routes = [
     name : 'NotFound',
     component: ()=> import('@/views/NotFound.vue'),
   },
-  {path: '/home', name: 'Home', component: Home},
+  {path: '/home', alias: '/', name: 'Home', component: Home},
   {path: '/news', name: 'News', component: News},
   {path: '/team', name: 'Team', component: Team},
   {path: '/contact', name: 'Contact', component: Contact},

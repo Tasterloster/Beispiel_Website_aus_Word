@@ -34,6 +34,8 @@ export default {
 .option{
   padding: 10px;
   text-align: center;
+  cursor: pointer;
+
 }
 
 .track {
@@ -51,6 +53,7 @@ input[type="radio"]{
   opacity: 0;
   width: 0;
   height: 0;
+
 }
 
 .option:has(>input:checked){

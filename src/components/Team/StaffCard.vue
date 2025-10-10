@@ -33,6 +33,13 @@ const props = defineProps({
   box-sizing: border-box;
   justify-content: center;
   background-color: rgba(44, 62, 80, 0.1);
+  @media (max-width: 931px){
+      max-width: 45%;
+    }
+  @media (max-width: 600px) {
+      max-width: 100%;
+
+  }
 }
 
 .staffCard__info {

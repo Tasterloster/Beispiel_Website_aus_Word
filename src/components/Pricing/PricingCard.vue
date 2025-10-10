@@ -54,6 +54,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+
 }
 .featureText {
   padding: 0 2em;
