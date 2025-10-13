@@ -20,10 +20,20 @@
         "path": "team",
         "id": 3,
         "text": "Team"
+      },{
+        "path": "activities",
+        "id": 4,
+        "text": "Activities",
+        "sub-routes": [{
+          "path": "Quiz",
+          "id": 1,
+          "text": "Quiz"
+        }
+        ]
       },
       {
         "path": "contact",
-        "id": 4,
+        "id": 5,
         "text": "Contact"
       }
     ]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import sourceDataRaw from '@/Routing.json'
+import sourceDataRaw from '@/routing-data.json'
 import { ref } from 'vue'
 
 const footerRoutes = ref(sourceDataRaw.footer.routes)

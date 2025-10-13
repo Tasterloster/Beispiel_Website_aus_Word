@@ -1,10 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Pricing from '@/views/Pricing.vue'
-import Home from '@/views/Home.vue'
-import News from '@/views/News.vue'
-import Team from '@/views/Team.vue'
-import Contact from '@/views/Contact.vue'
-import Impressum from '@/views/Impressum.vue'
 
 const routes = [
   {path: '/pricing', name: 'Pricing', component: Pricing},
@@ -13,11 +8,11 @@ const routes = [
     name : 'NotFound',
     component: ()=> import('@/views/NotFound.vue'),
   },
-  {path: '/home', alias: '/', name: 'Home', component: Home},
-  {path: '/news', name: 'News', component: News},
-  {path: '/team', name: 'Team', component: Team},
-  {path: '/contact', name: 'Contact', component: Contact},
-  {path: '/impressum', name: 'Impressum', component: Impressum},
+  {path: '/home', alias: '/', name: 'Home', component: ()=> import('@/views/Home.vue')},
+  {path: '/news', name: 'News', component: ()=> import('@/views/News.vue')},
+  {path: '/team', name: 'Team', component: ()=> import('@/views/Team.vue')},
+  {path: '/contact', name: 'Contact', component: ()=> import('@/views/Contact.vue')},
+  {path: '/impressum', name: 'Impressum', component: ()=> import('@/views/Impressum.vue')},
 ]
 
 const router = createRouter({
