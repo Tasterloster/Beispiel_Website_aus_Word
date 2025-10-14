@@ -12,6 +12,7 @@ input, select {
 }
 
 
+
 .navLink {
     padding: 1em 2em;
     text-decoration: none;
@@ -50,7 +51,9 @@ button {
     color: #F7FBFF;
     border: 1px solid rgba(44, 62, 80, 1);
     height: 2.5em;
-
+    width: 10em;
+    padding: 0;
+    margin: 1em 0;
     &:hover {
         transform: scale(1.05);
 

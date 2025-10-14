@@ -24,10 +24,15 @@
         "path": "activities",
         "id": 4,
         "text": "Activities",
-        "sub-routes": [{
-          "path": "Quiz",
-          "id": 1,
+        "subRoutes": [{
+          "path": "quiz",
+          "id": 0,
           "text": "Quiz"
+        },
+        {
+          "path": "quiz2",
+          "id": 1,
+          "text": "Quiz2"
         }
         ]
       },

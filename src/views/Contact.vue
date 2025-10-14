@@ -71,6 +71,13 @@ textarea:user-invalid {
   outline: red solid 1px;
 }
 
+form button{
+  height: 2.5em;
+  width: auto;
+  padding: 1px 4px;
+  margin: 0;
+}
+
 .contactUs{
   display: inline-grid;
   grid-template-columns: 1fr 1fr;

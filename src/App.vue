@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TheDesktopNavigation from '@/components/TheDesktopNavigation.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import TheMobileNavigator from '@/components/TheMobileNavigator.vue'
+import TheDekstopNavigation from '@/components/TheDesktopNavigation.vue'
 import { ref } from 'vue'
 
 const isOpen = ref(false)
@@ -12,7 +12,7 @@ const closeMenu = () => { isOpen.value = false }
 <template>
   <div class="bodyContainer" @click="closeMenu">
     <div class="headerDesktop">
-      <TheDesktopNavigation></TheDesktopNavigation>
+      <the-dekstop-navigation></the-dekstop-navigation>
     </div>
     <div class="headerMobile">
       <TheMobileNavigator

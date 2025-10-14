@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Item1",
+      "id": 0,
+      "imgName": "360_F_540653849_lBk6D9BsBcQGGw55o8u1oCJyuXXxojlY"
+    },
+    {
+      "name": "Item2",
+      "id": 1,
+      "imgName": "Bohrmaschine-Metabo"
+    },
+    {
+      "name": "Item3",
+      "id": 2,
+      "imgName": "Unbenannt"
+    }
+  ]
+}
