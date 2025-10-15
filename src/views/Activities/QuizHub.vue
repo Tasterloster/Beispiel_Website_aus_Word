@@ -8,7 +8,7 @@ const answers: Record<number, string> = {
 }
 
 const correctAnswersAmount = ref(0)
-const currentQuestion = ref(0)
+const currentQuestion = ref(1)
 
 function checkAnswer(a: boolean) {
   if (a) correctAnswersAmount.value += 1

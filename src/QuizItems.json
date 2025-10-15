@@ -3,17 +3,43 @@
     {
       "name": "Item1",
       "id": 0,
-      "imgName": "360_F_540653849_lBk6D9BsBcQGGw55o8u1oCJyuXXxojlY"
+      "imgName": "360_F_540653849_lBk6D9BsBcQGGw55o8u1oCJyuXXxojlY",
+      "type": "Werkzeug"
+
     },
     {
       "name": "Item2",
       "id": 1,
-      "imgName": "Bohrmaschine-Metabo"
+      "imgName": "Bohrmaschine-Metabo",
+      "type": "Werkzeug"
     },
     {
       "name": "Item3",
       "id": 2,
-      "imgName": "Unbenannt"
+      "imgName": "Unbenannt",
+      "type": "Spielzeug"
+
+    },
+    {
+      "name": "Item3",
+      "id": 3,
+      "imgName": "Unbenannt",
+      "type": "Spielzeug"
+
+    },
+    {
+      "name": "Item3",
+      "id": 4,
+      "imgName": "Unbenannt",
+      "type": "Spielzeug"
+
+    },
+    {
+      "name": "Item3",
+      "id": 5,
+      "imgName": "Unbenannt",
+      "type": "Spielzeug"
+
     }
   ]
 }
