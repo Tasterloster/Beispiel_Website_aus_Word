@@ -1,70 +1,113 @@
 <script setup lang="ts">
-import sourceData from '@/QuizItems.json'
-import {dragAndDrop, useDragAndDrop} from '@formkit/drag-and-drop/vue'
+import sourceData from '@/quiz-items.json'
+import { useDraggable } from 'vue-draggable-plus'
+import { type Ref, ref } from 'vue'
+
+
 const picturePath = '/images/quiz_images/quiz_2/'
 
+type item = {
+  name: string
+  id: number
+  imgName: string
+  type: string
+}
+const items = ref(sourceData.items)
+const tools = ref<item[]>([])
+const toys = ref<item[]>([])
+const itemPool = ref()
+const itemDropZoneOne = ref()
+const itemDropZoneTwo = ref()
 
-const [itemPool, items] =
-  useDragAndDrop(sourceData.items, {group: "dndQuiz"})
-const [itemDropZoneOne, tools] =
-  useDragAndDrop([], {group: "dndQuiz"})
-const [itemDropZoneTwo, toys] =
-  useDragAndDrop([], {group: "dndQuiz"})
+console.log('items: ', items)
+console.log('tools: ', tools)
+console.log('toys: ', toys)
 
-console.log('items: ', items.value)
-console.log('tools: ', tools.value)
-console.log('toys: ', toys.value)
-
-
+useDraggable(itemPool, items, {
+  animation: 150,
+  ghostClass: 'ghost',
+  group: 'people',
+  onUpdate: () => {
+    console.log('update items')
+  },
+  onAdd: () => {
+    console.log('add items')
+  },
+  remove: () => {
+    console.log('remove items')
+  },
+})
+useDraggable(itemDropZoneOne, tools, {
+  animation: 150,
+  ghostClass: 'ghost',
+  group: 'people',
+  onUpdate: () => {
+    console.log('update tools')
+  },
+  onAdd: () => {
+    console.log('add tools')
+  },
+  remove: () => {
+    console.log('remove tools')
+  },
+})
+useDraggable(itemDropZoneTwo, toys, {
+  animation: 150,
+  ghostClass: 'ghost',
+  group: 'people',
+  onUpdate: () => {
+    console.log('update toys')
+  },
+  onAdd: () => {
+    console.log('add toys')
+  },
+  remove: () => {
+    console.log('remove toys')
+  },
+})
 </script>
 
 <template>
   <div class="quizContainer">
     <div class="quizHeader">
-      <h1>Ordnen Sie die Items den Gruppen zu</h1>
     </div>
     <div class="dragAnDropQuiz">
       <div class="itemAreaContainer">
         <div class="itemHeader">Itempool</div>
         <div ref="itemPool" class="itemPool">
-            <img
-              class="dndImg item"
-              v-for="img in items"
-              :key="img.id"
-              :src="`${picturePath}${img.imgName}.jpg`"
-              :alt="img.name"
-            />
+          <img
+            class="dndImg item"
+            v-for="img in items"
+            :key="img.id"
+            :src="`${picturePath}${img.imgName}.jpg`"
+            :alt="img.name"
+          />
         </div>
       </div>
       <div class="dropOffContainer">
         <div class="dropOffHeader">Gruppen</div>
         <div class="dropOffBody">
-          <div
-            ref="itemDropZoneOne"
-            class="dropOffZone answerOne tools">
-            <p>Werkzeuge</p>
-<!--            <template v-for="tool in tools">-->
-<!--              {{tool}}-->
-<!--            </template>-->
+          <p>Werkzeuge</p>
+
+          <div ref="itemDropZoneOne" class="dropOffZone answerOne tools">
             <img
               class="dndImg item"
               v-for="tool in tools"
               :key="tool.id"
               :src="`${picturePath}${tool.imgName}.jpg`"
               :alt="tool.name"
-            >
+            />
           </div>
-          <div
-            ref="itemDropZoneTwo"
-            class="dropOffZone answerTwo toys">
-            <p>Spielzeuge</p>
+          <p>Spielzeuge</p>
+
+          <div ref="itemDropZoneTwo" class="dropOffZone answerTwo toys">
             <img
               class="dndImg item"
               v-for="toy in toys"
               :key="toy.id"
               :src="`${picturePath}${toy.imgName}.jpg`"
               :alt="toy.name"
-              >
+            />
           </div>
         </div>
       </div>
@@ -113,7 +156,7 @@ console.log('toys: ', toys.value)
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: .3em;
+  gap: 0.3em;
   margin-top: 1em;
   padding: 1em;
   background-color: white;
@@ -123,8 +166,8 @@ console.log('toys: ', toys.value)
 .dndImg {
   width: 200px;
   height: 200px;
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 50%;
+  max-height: 50%;
   object-fit: contain;
   background-color: white;
   border: 1px solid var(--vt-c-indigo);
