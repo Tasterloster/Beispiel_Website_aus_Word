@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import DragAndDrop from '@/views/Activities/Questions/DragAndDrop.vue'
+import DragAndDrop from '@/views/Activities/Questions/DragAndDropQuiz/DragAndDrop.vue'
 import MultipleChoice from '@/views/Activities/Questions/MultipleChoice.vue'
 import { ref } from 'vue'
-
-const answers: Record<number, string> = {
-  1: '7',
-}
+import FillInTheBlank from '@/views/Activities/Questions/FillInTheBlank.vue'
+import ResultsView from '@/views/Activities/Questions/ResultsView.vue'
 
 const correctAnswersAmount = ref(0)
-const currentQuestion = ref(1)
+const currentQuestion = ref(0)
+const questionAmount = ref(3)
 
 function checkAnswer(a: boolean) {
   if (a) correctAnswersAmount.value += 1
@@ -18,22 +17,34 @@ function checkAnswer(a: boolean) {
 
 <template>
   <h1>HOWDY!</h1>
-  <h2 id="answerFloat">Correct Answers: {{ correctAnswersAmount }}</h2>
-  <p>Question 1:</p>
+  <div class="questionHeader">
+    <p>Question 1:</p><p v-if="currentQuestion>0">✅</p>
+  </div>
   <multiple-choice
     @done="checkAnswer"
     v-if="currentQuestion===0"
   ></multiple-choice>
-  <p>Question 2:</p>
+  <div class="questionHeader">
+    <p>Question 2:</p><p v-if="currentQuestion>1">✅</p>
+  </div>
   <drag-and-drop
+    @done="checkAnswer"
     v-if="currentQuestion===1"
   ></drag-and-drop>
+  <div class="questionHeader">
+    <p>Question 3:</p><p v-if="currentQuestion>2">✅</p>
+  </div>
+  <fill-in-the-blank
+    @done="checkAnswer"
+    v-if="currentQuestion===2"
+  ></fill-in-the-blank>
+  <resultsView
+    v-if="currentQuestion===3"
+    :correct-answers-amount="correctAnswersAmount"
+    :question-amount="questionAmount"
+  >
+  </resultsView>
 </template>
 
 <style scoped>
-#answerFloat{
-  position: absolute;
-  top: 7.5em;
-  right: 4em;
-}
 </style>

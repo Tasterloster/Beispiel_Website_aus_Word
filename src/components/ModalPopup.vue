@@ -26,7 +26,7 @@ onBeforeUnmount(() => globalThis.removeEventListener('keydown', onKeydown))
       v-if="modelValue"
       class="overlay"
       aria-modal="true"
-      aria-label="News-Details"
+      aria-label="Popup-for-Details"
       @click.self="close"
     >
       <div class="dialog">

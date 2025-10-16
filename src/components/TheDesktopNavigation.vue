@@ -71,7 +71,6 @@ function showInput() {
   </div>
 
   <div class="dropdown">
-    <button @click="showInput">Show input</button>
   </div>
 </template>
 <style scoped>

@@ -147,6 +147,28 @@ select {
         }
     }
 }
+
+.questionHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (hover: hover) {
     a:hover {
         background-color: #2c3e50;

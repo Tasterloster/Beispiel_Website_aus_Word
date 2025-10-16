@@ -23,7 +23,7 @@ function done() {
   <div class="quizContainer">
     <form id="quizQuestionMultipleChoice" @submit.prevent="done">
       <div class="question">
-        <p>How many Days are in a week?</p>
+        <h2>How many Days are in a week?</h2>
       </div>
       <div class="answer">
         <input
@@ -32,6 +32,7 @@ function done() {
           value="3"
           name="questionOne"
           v-model="answer"
+          :required="true"
         />
         <label for="questionOneAnswerOne">3 Days</label>
       </div>
@@ -42,6 +43,7 @@ function done() {
           value="5"
           name="questionOne"
           v-model="answer"
+          :required="true"
         />
         <label for="questionOneAnswerTwo">5 Days</label>
       </div>
@@ -52,6 +54,7 @@ function done() {
           value="7"
           name="questionOne"
           v-model="answer"
+          :required="true"
         />
         <label for="questionOneAnswerThree">7 Days</label>
       </div>
