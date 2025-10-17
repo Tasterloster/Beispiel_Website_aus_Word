@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DragAndDrop from '@/views/Activities/Questions/DragAndDropQuiz/DragAndDrop.vue'
+import DragAndDrop from '@/views/Activities/Questions/DragAndDrop.vue'
 import MultipleChoice from '@/views/Activities/Questions/MultipleChoice.vue'
 import { ref } from 'vue'
 import FillInTheBlank from '@/views/Activities/Questions/FillInTheBlank.vue'
@@ -12,6 +12,10 @@ const questionAmount = ref(3)
 function checkAnswer(a: boolean) {
   if (a) correctAnswersAmount.value += 1
   currentQuestion.value +=1
+}
+function resetQuiz(){
+  correctAnswersAmount.value = 0
+  currentQuestion.value = 0
 }
 </script>
 
@@ -39,6 +43,7 @@ function checkAnswer(a: boolean) {
     v-if="currentQuestion===2"
   ></fill-in-the-blank>
   <resultsView
+    @tryAgain="resetQuiz"
     v-if="currentQuestion===3"
     :correct-answers-amount="correctAnswersAmount"
     :question-amount="questionAmount"

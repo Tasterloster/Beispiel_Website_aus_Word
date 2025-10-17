@@ -10,15 +10,15 @@ const routes = [
   { path: '/impressum', name: 'Impressum', component: () => import('@/views/Impressum.vue') },
   {
     path: '/activities',
-    name: 'Activities',
     children: [
       {
         path: '',
-        component: () => import('@/views/Activities/Activities.vue'),
+        name: 'Activities',
+        component: () => import('@/views/Activities.vue'),
       },
       {
         path: 'quiz',
-        name: 'Quizhub',
+        name: 'QuizHub',
         component: () => import('@/views/Activities/QuizHub.vue'),
       }
 

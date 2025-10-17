@@ -46,11 +46,11 @@
   "footer": {
     "routes": [
       {
-        "path": "contact",
+        "path": "/contact",
         "id": 0,
         "text": "Contact"
       },{
-        "path": "impressum",
+        "path": "/impressum",
         "id": 1,
         "text": "impressum"
       }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TheFooter from '@/components/TheFooter.vue'
-import TheMobileNavigator from '@/components/TheMobileNavigator.vue'
-import TheDekstopNavigation from '@/components/TheDesktopNavigation.vue'
+import TheFooter from '@/components/Routing/TheFooter.vue'
+import TheMobileNavigator from '@/components/Routing/TheMobileNavigator.vue'
+import TheDekstopNavigation from '@/components/Routing/TheDesktopNavigation.vue'
 import { ref } from 'vue'
 
 const isOpen = ref(false)
