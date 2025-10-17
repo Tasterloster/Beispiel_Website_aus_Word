@@ -73,7 +73,7 @@ function done() {
         Lorem ipsum dolor sit amet.
       </p>
       <div class="submitArea">
-        <button type="submit" class="submit">submit</button>
+        <button type="submit" class="submit">Submit</button>
       </div>
     </form>
   </div>

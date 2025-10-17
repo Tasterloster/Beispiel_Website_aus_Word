@@ -127,7 +127,7 @@ function done() {
       </div>
     </div>
     <div class="submitArea">
-      <button class="submit" @click="done">submit</button>
+      <button class="submit" @click="done">Submit</button>
     </div>
   </div>
 </template>
